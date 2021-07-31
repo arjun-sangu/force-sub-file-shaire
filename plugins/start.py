@@ -105,13 +105,12 @@ async def not_joined(client: Client, message: Message):
         text = text + f" <b>and <a href='https://t.me/{client.username}?start={argument}'>try again</a></b>"
     except ValueError:
         pass
-else:
     reply_markup = InlineKeyboardMarkup(
         [     
             [
                 InlineKeyboardButton("💢ALL MOVIES💢", url = client.invitelink)
             ],[
-                InlineKeyboardButton("🔁TRY AGAIN🔁", url ="https://t.me/{client.username}?start={argument}")
+                InlineKeyboardButton("🔁TRY AGAIN🔁", url ="https://t.me/{client.username}?start=")
             ]
         ]
     )
